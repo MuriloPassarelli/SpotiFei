@@ -9,7 +9,10 @@ package model;
  * @author unifmpassarelli
  */
 public class Artista extends Pessoa {
-    private String nickname;
-    private int idArtista;
+
+    public Artista(String nome, String email) {
+        super(nome, email);
+    }
+
 }
 

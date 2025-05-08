@@ -4,21 +4,38 @@
  */
 package controller;
 
-import DAO.PessoaDAO;
+import DAO.UsuarioDAO;
 import DAO.Conexao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import model.Usuario;
-import view.Cadastro;
+import view.CadastroView;
 /**
  *
  * @author unifmpassarelli
  */
 public class ControllerCadastro {
-    private Cadastro view;
+    private CadastroView view;
 
-    public ControllerCadastro(Cadastro view) {
+    public ControllerCadastro(CadastroView view) {
         this.view = view;
+    }
+    
+    public void salvarUsuario(){
+        String nome = view.getjTextField1().getText();
+        String email = view.getjTextField2().getText();
+        String senha = view.getjPasswordField2().getText();
+        Usuario usuario = new Usuario(nome, email,senha);
+        
+        Conexao conexao = new Conexao();
+        try {
+            Connection conn = conexao.getConnection();
+            UsuarioDAO dao = new UsuarioDAO(conn);
+            dao.inserir(usuario);
+            JOptionPane.showMessageDialog(view, "Usuario Cadastrado!","Aviso", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(view, "Usuário não cadastrado!","Erro", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

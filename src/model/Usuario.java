@@ -11,10 +11,21 @@ import java.util.ArrayList;
  * @author unifmpassarelli
  */
 public class Usuario extends Pessoa {
-    private String nickname;
-    private int idUsuario;
     private String senha;
     ArrayList<Playlist> Playlists = new ArrayList<>();
+
+    public Usuario(String nome, String email, String senha) {
+        super(nome, email);
+        this.senha = senha;
+    }
+
+
     
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
     
 }
