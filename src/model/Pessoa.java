@@ -17,6 +17,9 @@ public class Pessoa {
         this.email = email;
     }
 
+    public Pessoa() {
+    }
+    
     public String getNome() {
         return nome;
     }

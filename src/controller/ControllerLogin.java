@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import model.Usuario;
-import view.PesquisaView;
+import view.HomeView;
 import view.LoginView;
 
 
@@ -36,7 +36,7 @@ public class ControllerLogin {
                 Usuario usuario2 = new Usuario(res.getString("nomeUsuario"), 
                                          res.getString("emailUsuario"), 
                                          res.getString("senhaUsuario"));
-                PesquisaView aec = new PesquisaView(usuario2);
+                HomeView aec = new HomeView(usuario2);
                 aec.setVisible(true);
                 view.dispose();
             } else{
