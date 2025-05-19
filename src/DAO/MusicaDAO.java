@@ -86,4 +86,50 @@ public class MusicaDAO {
 
         return listaMusicas;
     }
+    
+    public void curtirMusica(String emailUsuario, int idMusica) {
+        try (Connection conn = conexao.getConnection()) {
+            // Remove da descurtida
+            PreparedStatement stmt1 = conn.prepareStatement("DELETE FROM "
+                    + "MusicasDescurtidas WHERE emailusuario = ? "
+                    + "AND idmusica = ?");
+            stmt1.setString(1, emailUsuario);
+            stmt1.setInt(2, idMusica);
+            stmt1.executeUpdate();
+
+            // Insere na curtida (se não existir)
+            PreparedStatement stmt2 = conn.prepareStatement("INSERT INTO "
+                    + "MusicasCurtidas (emailusuario, idmusica) VALUES (?, ?) "
+                    + "ON CONFLICT DO NOTHING");
+            stmt2.setString(1, emailUsuario);
+            stmt2.setInt(2, idMusica);
+            stmt2.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void descurtirMusica(String emailUsuario, int idMusica) {
+        try (Connection conn = conexao.getConnection()) {
+            // Remove da curtida
+            PreparedStatement stmt1 = conn.prepareStatement("DELETE FROM "
+                    + "MusicasCurtidas WHERE emailusuario = ? AND idmusica = ?");
+            stmt1.setString(1, emailUsuario);
+            stmt1.setInt(2, idMusica);
+            stmt1.executeUpdate();
+
+            // Insere na descurtida (se não existir)
+            PreparedStatement stmt2 = conn.prepareStatement("INSERT INTO "
+                    + "MusicasDescurtidas (emailusuario, idmusica) VALUES (?, ?)"
+                    + " ON CONFLICT DO NOTHING");
+            stmt2.setString(1, emailUsuario);
+            stmt2.setInt(2, idMusica);
+            stmt2.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+}
+
 }

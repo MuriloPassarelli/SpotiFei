@@ -15,6 +15,7 @@ public class Playlist {
     private int idplaylist;
     private String tituloplaylist;
     private String emailusuario;
+    private ArrayList<Musica> Musicas = new ArrayList<>();
 
     public Playlist(int idplaylist, String tituloplaylist) {
         this.idplaylist = idplaylist;
@@ -48,5 +49,12 @@ public class Playlist {
         this.emailusuario = emailusuario;
     }
 
+    public ArrayList<Musica> getMusicas() {
+        return Musicas;
+    }
+
+    public void setMusicas(ArrayList<Musica> Musicas) {
+        this.Musicas = Musicas;
+    }
     
 }

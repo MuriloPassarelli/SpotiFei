@@ -18,10 +18,15 @@ import java.util.ArrayList;
 public class ControllerPesquisa {
     private PesquisaView view;
     private MusicaDAO musicaDAO;
+    private String emailUsuario;
 
-    public ControllerPesquisa(PesquisaView view) {
+    public ControllerPesquisa(PesquisaView view, String emailUsuario) {
         this.view = view;
         this.musicaDAO = new MusicaDAO();
+        this.emailUsuario = emailUsuario;
+        
+        view.getjButton3().addActionListener(e -> curtirMusicaSelecionada());
+        view.getjButton4().addActionListener(e -> descurtirMusicaSelecionada());
     }
 
     public void pesquisar() {
@@ -63,4 +68,43 @@ public class ControllerPesquisa {
 
         view.getjTable1().setModel(model);
     }
+
+    private void curtirMusicaSelecionada() {
+        int row = view.getjTable1().getSelectedRow();
+        if (row == -1) {
+            view.getjLabel8().setText("Nenhuma música selecionada.");
+            return;
+        }
+
+        String titulo = (String) view.getjTable1().getValueAt(row, 0);
+        ArrayList<Musica> musicas = musicaDAO.buscarPorFiltro(titulo, "nome");
+        if (musicas.isEmpty()) {
+            view.getjLabel8().setText("Música não encontrada.");
+            return;
+        }
+
+        Musica musica = musicas.get(0);
+        musicaDAO.curtirMusica(emailUsuario, musica.getIdmusica());
+        view.getjLabel8().setText("Música curtida!");
+    }
+
+    private void descurtirMusicaSelecionada() {
+        int row = view.getjTable1().getSelectedRow();
+        if (row == -1) {
+            view.getjLabel8().setText("Nenhuma música selecionada.");
+            return;
+        }
+
+        String titulo = (String) view.getjTable1().getValueAt(row, 0);
+        ArrayList<Musica> musicas = musicaDAO.buscarPorFiltro(titulo, "nome");
+        if (musicas.isEmpty()) {
+            view.getjLabel8().setText("Música não encontrada.");
+            return;
+        }
+
+        Musica musica = musicas.get(0);
+        musicaDAO.descurtirMusica(emailUsuario, musica.getIdmusica());
+        view.getjLabel8().setText("Música descurtida!");
+    }
+
 }
