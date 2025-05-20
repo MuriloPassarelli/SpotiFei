@@ -3,19 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/controller/ControllerPesquisa.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/view/HomeView.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/model/Musica.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/model/Playlist.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/model/Artista.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/view/LoginView.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/view/PesquisaView.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/view/CadastroView.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/controller/ControllerLogin.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/model/Usuario.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/main/main.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/DAO/MusicaDAO.java</file>
-            <file>file:/C:/Users/unifmpassarelli/Downloads/SpotiFei/src/view/GerenciarPlaylistsView.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/view/LoginView.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/view/GerenciarPlaylistsView.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerPesquisa.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerLogin.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/MusicaDAO.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/view/HomeView.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/view/PesquisaView.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/view/HistoricoView.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/model/Playlist.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/model/Pessoa.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/model/Artista.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/model/Usuario.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/view/CadastroView.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/PlaylistDAO.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/HistoricoDAO.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerHistorico.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerPlaylist.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerCadastro.java</file>
         </group>
     </open-files>
 </project-private>
