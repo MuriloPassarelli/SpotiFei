@@ -44,7 +44,5 @@ public class UsuarioDAO {
         ResultSet resultado = statement.getResultSet();
         return resultado;
     }
-
-    // Outros métodos como findById, update, delete...
 }
 

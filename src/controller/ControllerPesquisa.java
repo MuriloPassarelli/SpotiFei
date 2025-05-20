@@ -47,7 +47,7 @@ public class ControllerPesquisa {
             return;
         }
 
-        ArrayList<Musica> resultados = musicaDAO.buscarPorFiltro(termo, filtro);
+        ArrayList<Musica> resultados = musicaDAO.buscarPorFiltro(termo, filtro, emailUsuario);
 
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(new String[]{"Título", "Gênero", "Data", "Artista"});
@@ -77,7 +77,7 @@ public class ControllerPesquisa {
         }
 
         String titulo = (String) view.getjTable1().getValueAt(row, 0);
-        ArrayList<Musica> musicas = musicaDAO.buscarPorFiltro(titulo, "nome");
+        ArrayList<Musica> musicas = musicaDAO.buscarPorFiltro(titulo, "nome", emailUsuario);
         if (musicas.isEmpty()) {
             view.getjLabel8().setText("Música não encontrada.");
             return;
@@ -96,7 +96,7 @@ public class ControllerPesquisa {
         }
 
         String titulo = (String) view.getjTable1().getValueAt(row, 0);
-        ArrayList<Musica> musicas = musicaDAO.buscarPorFiltro(titulo, "nome");
+        ArrayList<Musica> musicas = musicaDAO.buscarPorFiltro(titulo, "nome", emailUsuario);
         if (musicas.isEmpty()) {
             view.getjLabel8().setText("Música não encontrada.");
             return;

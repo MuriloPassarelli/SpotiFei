@@ -6,7 +6,7 @@ package controller;
 
 /**
  *
- * @author megae
+ * @author unifmpassarelli
  */
 public class ControllerPlaylist {
     
