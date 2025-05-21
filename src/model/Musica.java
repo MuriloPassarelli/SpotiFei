@@ -7,7 +7,7 @@ package model;
 import java.util.ArrayList;
 
 /**
- *
+ * Classe padrão de P.O.O. para dados das musicas.
  * @author unifmpassarelli
  */
 public class Musica {

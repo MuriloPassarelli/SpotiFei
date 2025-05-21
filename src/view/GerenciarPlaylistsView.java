@@ -26,7 +26,8 @@ import model.Usuario;
 import model.Playlist;
 
 /**
- *
+ * Tela view de gerenciamento de playlists como
+ * criação, exclusão, renomeação, adição e remoção de musicas.
  * @author unifmpassarelli
  */
 public class GerenciarPlaylistsView extends javax.swing.JFrame {
@@ -590,10 +591,6 @@ public class GerenciarPlaylistsView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "O novo nome não pode ser vazio.");
         }
     }//GEN-LAST:event_jButton10ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

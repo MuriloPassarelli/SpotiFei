@@ -7,7 +7,7 @@ package main;
 import view.LoginView;
 
 /**
- *
+ * Classe main, somente para iniciar o codigo.
  * @author unifmpassarelli
  */
 public class main {

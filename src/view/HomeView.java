@@ -7,7 +7,7 @@ package view;
 import model.Usuario;
 
 /**
- *
+ * Tela view inicial para redirecionamento do usuario a qualquer tela.
  * @author unifmpassarelli
  */
 public class HomeView extends javax.swing.JFrame {
@@ -190,10 +190,6 @@ public class HomeView extends javax.swing.JFrame {
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

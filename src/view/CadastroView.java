@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import model.Usuario;
 
 /**
- *
+ * Tela view de cadastro de usuarios.
  * @author unifmpassarelli
  */
 public class CadastroView extends javax.swing.JFrame {
@@ -288,11 +288,7 @@ public class CadastroView extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

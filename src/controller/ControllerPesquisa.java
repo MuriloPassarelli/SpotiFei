@@ -5,7 +5,9 @@
 package controller;
 
 /**
- *
+ * ControllerPesquisa gerencia as ações 
+ * relacionadas a tela de pesquisa de musicas
+ * e curtir de descurtir musicas.
  * @author unifmpassarelli
  */
 import DAO.MusicaDAO;

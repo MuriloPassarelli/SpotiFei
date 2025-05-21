@@ -14,7 +14,8 @@ import model.Data;
 import model.Musica;
 
 /**
- *
+ * Classe DAO responsável por gerenciar a conexão com o banco de dados
+ * relacionada às funções de gerenciamento de historico de pesquisas.
  * @author unifmpassarelli
  */
 public class HistoricoDAO {

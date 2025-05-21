@@ -13,7 +13,9 @@ import javax.swing.table.DefaultTableModel;
 import model.Musica;
 import view.HistoricoView;
 /**
- *
+ * ControllerHistoricoEInfos gerencia as ações 
+ * relacionadas a tela de gerenciar historico de pesquisas
+ * e ver musicas curtidas e descurtidas.
  * @author unifmpassarelli
  */
 public class ControllerHistoricoEInfos {

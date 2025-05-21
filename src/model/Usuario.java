@@ -7,7 +7,7 @@ package model;
 import java.util.ArrayList;
 
 /**
- *
+ * Classe padrão de P.O.O. para dados dos usuarios.
  * @author unifmpassarelli
  */
 public class Usuario extends Pessoa {

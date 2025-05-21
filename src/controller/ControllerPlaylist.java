@@ -15,7 +15,9 @@ import model.Playlist;
 import view.GerenciarPlaylistsView;
 
 /**
- *
+ * ControllerPlaylist gerencia as ações 
+ * relacionadas a tela de gerenciar playlists
+ * podendo criar, excluir, renomear e adicionar e remover musicas.
  * @author unifmpassarelli
  */
 public class ControllerPlaylist {

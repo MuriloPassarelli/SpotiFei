@@ -5,7 +5,7 @@
 package model;
 
 /**
- *
+ * Classe para simplificar a manipulação de datas.
  * @author unifmpassarelli
  */
 public class Data {

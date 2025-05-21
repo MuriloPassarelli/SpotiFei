@@ -5,7 +5,7 @@
 package model;
 
 /**
- *
+ * Classe padrão de P.O.O. para dados dos artistas
  * @author unifmpassarelli
  */
 public class Artista extends Pessoa {

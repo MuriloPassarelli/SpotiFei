@@ -7,7 +7,8 @@ import controller.ControllerHistoricoEInfos;
 import javax.swing.*;
 import model.Usuario;
 /**
- *
+ * Tela view de visualização e gerenciamento de 
+ * historico, musicas curtidas e descurtidas.
  * @author unifmpassarelli
  */
 public class HistoricoView extends javax.swing.JFrame {
@@ -509,10 +510,6 @@ public class HistoricoView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Selecione uma música para remover.");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

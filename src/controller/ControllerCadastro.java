@@ -12,7 +12,8 @@ import javax.swing.JOptionPane;
 import model.Usuario;
 import view.CadastroView;
 /**
- *
+ * ControllerCadastro gerencia as ações 
+ * relacionadas a tela de cadastrar novos usuários.
  * @author unifmpassarelli
  */
 public class ControllerCadastro {

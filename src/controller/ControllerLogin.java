@@ -14,7 +14,8 @@ import model.Usuario;
 import view.HomeView;
 import view.LoginView;
 /**
- *
+ * ControllerLogin gerencia as ações 
+ * relacionadas a tela de login dos usuários.
  * @author unifmpassarelli
  */
 public class ControllerLogin {
@@ -24,7 +25,7 @@ public class ControllerLogin {
         this.view = view;
     }
     
-    public void loginAluno(){
+    public void loginUsuario(){
         Usuario usuario = new Usuario(null, 
                                 view.getjTextField1().getText(),
                                 view.getjPasswordField1().getText());

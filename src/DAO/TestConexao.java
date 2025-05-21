@@ -6,7 +6,7 @@ package DAO;
 import java.sql.Connection;
 
 /**
- *
+ * Classe DAO criada unicamente para testes de conexão simples.
  * @author unifmpassarelli
  */
 public class TestConexao {

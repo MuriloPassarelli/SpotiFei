@@ -19,7 +19,8 @@ import javax.swing.ButtonGroup;
 import javax.swing.table.DefaultTableModel;
 import model.Musica;
 /**
- *
+ * Tela view de presquisa de musicas por titulo, genero ou artista
+ * também contém adição de musicas as listas de musicas curtidas e descurtidas.
  * @author unifmpassarelli
  */
 public class PesquisaView extends javax.swing.JFrame {
@@ -464,11 +465,6 @@ public class PesquisaView extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;

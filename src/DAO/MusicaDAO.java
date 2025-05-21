@@ -5,7 +5,9 @@
 package DAO;
 
 /**
- *
+ * Classe DAO responsável por gerenciar a conexão com o banco de dados
+ * relacionada às funções de manipulação de musicas
+ * como pesquisar, listar, curtir e descurtir.
  * @author unifmpassarelli
  */
 import java.sql.Connection;

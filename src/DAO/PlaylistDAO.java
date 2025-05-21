@@ -5,7 +5,9 @@
 package DAO;
 
 /**
- *
+ * Classe DAO responsável por gerenciar a conexão com o banco de dados
+ * relacionada às funções de manipulação de playlists
+ * como atualizarTitulo, listar, adicionar e remover musicas.
  * @author unifmpassarelli
  */
 

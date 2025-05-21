@@ -5,7 +5,8 @@
 package model;
 
 /**
- *
+ * Classe padrão de P.O.O. para dados das pessoas 
+ * classe pai dos usuarios e artistas.
  * @author unifmpassarelli
  */
 public class Pessoa {
