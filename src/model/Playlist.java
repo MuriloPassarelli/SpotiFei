@@ -17,9 +17,15 @@ public class Playlist {
     private String emailusuario;
     private ArrayList<Musica> Musicas = new ArrayList<>();
 
-    public Playlist(int idplaylist, String tituloplaylist) {
+    public Playlist(int idplaylist, String tituloplaylist, String emailusuario) {
         this.idplaylist = idplaylist;
         this.tituloplaylist = tituloplaylist;
+        this.emailusuario = emailusuario;
+    }
+    
+    public Playlist(String tituloplaylist, String emailusuario) {
+        this.tituloplaylist = tituloplaylist;
+        this.emailusuario = emailusuario;
     }
 
     public Playlist() {
@@ -57,4 +63,8 @@ public class Playlist {
         this.Musicas = Musicas;
     }
     
+    @Override
+    public String toString() {
+        return this.tituloplaylist;
+    }
 }

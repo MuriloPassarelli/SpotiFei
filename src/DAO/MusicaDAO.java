@@ -259,7 +259,6 @@ public class MusicaDAO {
                 }
             }
 
-            // 4. Insere o novo termo
             try (PreparedStatement stmt = conn.prepareStatement(inserir)) {
                 stmt.setString(1, emailUsuario);
                 stmt.setString(2, termo);

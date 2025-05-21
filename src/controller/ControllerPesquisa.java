@@ -42,7 +42,6 @@ public class ControllerPesquisa {
         }
 
         if (filtro.isEmpty()) {
-            // Aqui você pode adicionar um JOptionPane para avisar o usuário
             System.out.println("Nenhum filtro selecionado.");
             return;
         }
