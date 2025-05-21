@@ -26,6 +26,12 @@ public class ControllerCadastro {
         String nome = view.getjTextField1().getText();
         String email = view.getjTextField2().getText();
         String senha = view.getjPasswordField2().getText();
+        
+        if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
+            JOptionPane.showMessageDialog(view, "Por favor, preencha todos os campos!", "Aviso", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
         Usuario usuario = new Usuario(nome, email,senha);
         
         Conexao conexao = new Conexao();
@@ -35,7 +41,7 @@ public class ControllerCadastro {
             dao.inserir(usuario);
             JOptionPane.showMessageDialog(view, "Usuario Cadastrado!","Aviso", JOptionPane.INFORMATION_MESSAGE);
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(view, "Usuário não cadastrado!","Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(view, "Erro ao cadastrar o Usuário!","Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 }

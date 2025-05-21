@@ -61,28 +61,16 @@ public class GerenciarPlaylistsView extends javax.swing.JFrame {
             if (!e.getValueIsAdjusting()) {
                 int index = jList3.getSelectedIndex();
                 if (index >= 0) {
-                    Playlist playlistSelecionada = playlistsUsuario.get(index);
-                    controller.carregarMusicasDaPlaylist(
-                            playlistSelecionada.getIdplaylist(), jList9);
+                    int idPlaylist = controller.getIdPlaylistSelecionada(index);
+                    if (idPlaylist != -1) {
+                        controller.carregarMusicasDaPlaylist(idPlaylist, jList9);
+                    }
                 } else {
                     jList9.setModel(new DefaultListModel<>());
                 }
             }
         });
-        
-//        jList6.addListSelectionListener(e -> {
-//       if (!e.getValueIsAdjusting()) {
-//            int indexSelecionado = jList6.getSelectedIndex();
-//            if (indexSelecionado >= 0) {
-//                Musica musicaSelecionada = controller.getUltimosResultadosBusca().get(indexSelecionado);
-//
-//                DefaultListModel<String> model = (DefaultListModel<String>) jList9.getModel();
-//                controller.adicionarMusicaNaEdicao(musicaSelecionada, model);
-//            }
-//        }
-//    });
-
-        
+   
         controller.atualizarSuasPlaylists(jList3, usuario.getEmail());
     }
 
@@ -570,13 +558,17 @@ public class GerenciarPlaylistsView extends javax.swing.JFrame {
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         int index = jList3.getSelectedIndex();
-        int idPlaylistSelecionada = playlistsUsuario.get(index).getIdplaylist();
-        boolean sucesso = controller.salvarAlteracoes(idPlaylistSelecionada);
-        if (sucesso) {
-            JOptionPane.showMessageDialog(this, "Playlist atualizada com sucesso!");
-            controller.atualizarSuasPlaylists(jList3, usuario.getEmail());
+        if (index >= 0) {
+            int idPlaylistSelecionada = controller.getIdPlaylistSelecionada(index);
+            boolean sucesso = controller.salvarAlteracoes(idPlaylistSelecionada);
+            if (sucesso) {
+                JOptionPane.showMessageDialog(this, "Playlist atualizada com sucesso!");
+                controller.atualizarSuasPlaylists(jList3, usuario.getEmail());
+            } else {
+                JOptionPane.showMessageDialog(this, "Erro ao atualizar a playlist.");
+            }
         } else {
-            JOptionPane.showMessageDialog(this, "Erro ao atualizar a playlist.");
+            JOptionPane.showMessageDialog(this, "Nenhuma playlist selecionada.");
         }
     }//GEN-LAST:event_jButton11ActionPerformed
 

@@ -28,6 +28,13 @@ public class ControllerLogin {
         Usuario usuario = new Usuario(null, 
                                 view.getjTextField1().getText(),
                                 view.getjPasswordField1().getText());
+        
+        if (usuario.getEmail().isEmpty() || usuario.getSenha().isEmpty()) {
+            JOptionPane.showMessageDialog(view, "Email e senha não podem estar "
+                    + "vazios!", "Aviso", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
@@ -46,7 +53,8 @@ public class ControllerLogin {
                 view.dispose();
             } else{
                 JOptionPane.showMessageDialog(view, 
-                                              "Login NÃO efetuado!\nEmail e/ou senha incorretos!", 
+                                              "Login NÃO efetuado!\nEmail e/ou "
+                                                      + "senha incorretos!", 
                                               "Aviso",
                                               JOptionPane.ERROR_MESSAGE);
             }

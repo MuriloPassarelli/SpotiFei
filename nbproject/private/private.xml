@@ -18,9 +18,12 @@
             <file>file:/C:/Users/megae/Downloads/SpotiFei/src/view/CadastroView.java</file>
             <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/PlaylistDAO.java</file>
             <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/HistoricoDAO.java</file>
-            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerHistorico.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerHistoricoEInfos.java</file>
             <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerPlaylist.java</file>
             <file>file:/C:/Users/megae/Downloads/SpotiFei/src/controller/ControllerCadastro.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/Conexao.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/UsuarioDAO.java</file>
+            <file>file:/C:/Users/megae/Downloads/SpotiFei/src/DAO/TestConexao.java</file>
         </group>
     </open-files>
 </project-private>
