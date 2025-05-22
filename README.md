@@ -19,3 +19,6 @@ SpotiFei é uma aplicação Java para gerenciamento de playlists e músicas, com
 
 - Desenvolvido por: Murilo Brenneken Duarte Passarelli
 - Email: murilo.brenneken.passarelli@gmail.com
+
+## Relatório
+  https://docs.google.com/document/d/1ERTdjcCQ62QeEw5ME5S_jd9bH6y4lthn1Y-0SC9UFB8/edit?usp=sharing
