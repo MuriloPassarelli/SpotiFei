@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-05-21 18:38:57
+-- Started on 2025-05-21 23:51:43
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -161,7 +161,7 @@ CREATE TABLE public.usuario (
 ALTER TABLE public.usuario OWNER TO postgres;
 
 --
--- TOC entry 4836 (class 0 OID 24577)
+-- TOC entry 4842 (class 0 OID 24577)
 -- Dependencies: 217
 -- Data for Name: artista; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -181,7 +181,7 @@ clara.m@email.com	Clara Martins
 
 
 --
--- TOC entry 4837 (class 0 OID 24582)
+-- TOC entry 4843 (class 0 OID 24582)
 -- Dependencies: 218
 -- Data for Name: artistamusica; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -201,33 +201,33 @@ clara.m@email.com	10
 
 
 --
--- TOC entry 4838 (class 0 OID 24587)
+-- TOC entry 4844 (class 0 OID 24587)
 -- Dependencies: 219
 -- Data for Name: historico; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.historico (emailusuario, pesquisa, datapesquisa) FROM stdin;
-murilo@gmail.com	oi	2025-05-21 02:24:38.229749-03
-murilo@gmail.com	na	2025-05-21 02:24:44.629051-03
-murilo@gmail.com	ck	2025-05-21 02:24:53.301007-03
-murilo@gmail.com	Horizonte Infinito	2025-05-21 02:24:57.576801-03
-murilo@gmail.com	rock	2025-05-21 02:25:21.19249-03
-murilo@gmail.com	Ruas Antigas	2025-05-21 02:25:22.51604-03
 jsilva@hotmail.com	Rock	2025-05-21 15:46:40.045042-03
 jsilva@hotmail.com	Ruas Antigas	2025-05-21 15:46:41.438391-03
 jsilva@hotmail.com	Horizonte Infinito	2025-05-21 15:46:42.576295-03
 jsilva@hotmail.com		2025-05-21 15:46:46.03375-03
 jsilva@hotmail.com	Sons do Coração	2025-05-21 15:46:53.517658-03
 jsilva@hotmail.com	Passos Lentos	2025-05-21 15:46:55.649529-03
-murilo@gmail.com	Sons do Coração	2025-05-20 20:02:43.873281-03
-murilo@gmail.com	ana	2025-05-20 20:02:47.488093-03
-murilo@gmail.com	Ecos do Amanhã	2025-05-20 20:02:49.095903-03
-murilo@gmail.com		2025-05-20 20:11:07.004356-03
+murilo@gmail.com	Vento Sul	2025-05-21 23:50:05.846473-03
+murilo@gmail.com		2025-05-21 23:50:16.656073-03
+murilo@gmail.com	Noite Serena	2025-05-21 23:50:27.840339-03
+murilo@gmail.com	Luzes da Cidade	2025-05-21 23:39:39.056933-03
+murilo@gmail.com	Sons do Coração	2025-05-21 23:39:39.943957-03
+murilo@gmail.com	Passos Lentos	2025-05-21 23:39:42.104562-03
+murilo@gmail.com	Horizonte Infinito	2025-05-21 23:39:45.216047-03
+murilo@gmail.com	Ruas Antigas	2025-05-21 23:39:46.749865-03
+murilo@gmail.com	Frequência Subterrânea	2025-05-21 23:39:48.969352-03
+murilo@gmail.com	Chuva de Neon	2025-05-21 23:39:50.466111-03
 \.
 
 
 --
--- TOC entry 4839 (class 0 OID 24592)
+-- TOC entry 4845 (class 0 OID 24592)
 -- Dependencies: 220
 -- Data for Name: musica; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -247,7 +247,7 @@ COPY public.musica (idmusica, titulomusica, generomusica, datalancamento) FROM s
 
 
 --
--- TOC entry 4840 (class 0 OID 24597)
+-- TOC entry 4846 (class 0 OID 24597)
 -- Dependencies: 221
 -- Data for Name: musicaplaylist; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -255,60 +255,65 @@ COPY public.musica (idmusica, titulomusica, generomusica, datalancamento) FROM s
 COPY public.musicaplaylist (idplaylist, idmusica) FROM stdin;
 6	3
 6	8
-9	6
-7	1
-8	2
-5	5
-4	10
+10	2
+10	7
+10	9
+7	3
+7	8
 \.
 
 
 --
--- TOC entry 4841 (class 0 OID 24600)
+-- TOC entry 4847 (class 0 OID 24600)
 -- Dependencies: 222
 -- Data for Name: musicascurtidas; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.musicascurtidas (emailusuario, idmusica) FROM stdin;
-murilo@gmail.com	4
 teste@email	8
 jsilva@hotmail.com	3
 jsilva@hotmail.com	8
+murilo@gmail.com	8
+murilo@gmail.com	3
+murilo@gmail.com	6
+murilo@gmail.com	2
+murilo@gmail.com	4
 \.
 
 
 --
--- TOC entry 4842 (class 0 OID 24605)
+-- TOC entry 4848 (class 0 OID 24605)
 -- Dependencies: 223
 -- Data for Name: musicasdescurtidas; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.musicasdescurtidas (emailusuario, idmusica) FROM stdin;
 teste@email	1
-murilo@gmail.com	3
 jsilva@hotmail.com	10
 jsilva@hotmail.com	5
+murilo@gmail.com	1
+murilo@gmail.com	7
+murilo@gmail.com	10
+murilo@gmail.com	5
+murilo@gmail.com	9
 \.
 
 
 --
--- TOC entry 4843 (class 0 OID 24610)
+-- TOC entry 4849 (class 0 OID 24610)
 -- Dependencies: 224
 -- Data for Name: playlist; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.playlist (idplaylist, tituloplaylist, emailusuario) FROM stdin;
 6	ROCK BOLADO	jsilva@hotmail.com
-9	lovezin	murilo@gmail.com
-7	rockknroll	murilo@gmail.com
-8	chuva de neon	murilo@gmail.com
-5	lentidao	murilo@gmail.com
-4	coracao ecoa	murilo@gmail.com
+7	rocknroll	murilo@gmail.com
+10	teste	murilo@gmail.com
 \.
 
 
 --
--- TOC entry 4845 (class 0 OID 24616)
+-- TOC entry 4851 (class 0 OID 24616)
 -- Dependencies: 226
 -- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -321,12 +326,12 @@ jsilva@hotmail.com	joaozinho da silva	eita
 
 
 --
--- TOC entry 4851 (class 0 OID 0)
+-- TOC entry 4857 (class 0 OID 0)
 -- Dependencies: 225
 -- Name: playlist_idplaylist_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.playlist_idplaylist_seq', 9, true);
+SELECT pg_catalog.setval('public.playlist_idplaylist_seq', 10, true);
 
 
 --
@@ -348,7 +353,7 @@ ALTER TABLE ONLY public.musica
 
 
 --
--- TOC entry 4678 (class 2606 OID 24626)
+-- TOC entry 4684 (class 2606 OID 24626)
 -- Name: playlist playlist_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -357,7 +362,34 @@ ALTER TABLE ONLY public.playlist
 
 
 --
--- TOC entry 4680 (class 2606 OID 24628)
+-- TOC entry 4680 (class 2606 OID 24690)
+-- Name: musicascurtidas unicacurtida; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.musicascurtidas
+    ADD CONSTRAINT unicacurtida UNIQUE (emailusuario, idmusica);
+
+
+--
+-- TOC entry 4682 (class 2606 OID 24692)
+-- Name: musicasdescurtidas unicadescurtida; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.musicasdescurtidas
+    ADD CONSTRAINT unicadescurtida UNIQUE (emailusuario, idmusica);
+
+
+--
+-- TOC entry 4678 (class 2606 OID 24694)
+-- Name: musicaplaylist unicamusicanaplaylist; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.musicaplaylist
+    ADD CONSTRAINT unicamusicanaplaylist UNIQUE (idplaylist, idmusica);
+
+
+--
+-- TOC entry 4686 (class 2606 OID 24628)
 -- Name: usuario usuario_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -366,7 +398,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- TOC entry 4681 (class 2606 OID 24629)
+-- TOC entry 4687 (class 2606 OID 24629)
 -- Name: artistamusica artistamusica_emailartista_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -375,7 +407,7 @@ ALTER TABLE ONLY public.artistamusica
 
 
 --
--- TOC entry 4682 (class 2606 OID 24634)
+-- TOC entry 4688 (class 2606 OID 24634)
 -- Name: artistamusica artistamusica_idmusica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -384,7 +416,7 @@ ALTER TABLE ONLY public.artistamusica
 
 
 --
--- TOC entry 4690 (class 2606 OID 24639)
+-- TOC entry 4696 (class 2606 OID 24639)
 -- Name: playlist fk_playlist_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -393,7 +425,7 @@ ALTER TABLE ONLY public.playlist
 
 
 --
--- TOC entry 4683 (class 2606 OID 24644)
+-- TOC entry 4689 (class 2606 OID 24644)
 -- Name: historico historico_emailusuario_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -402,7 +434,7 @@ ALTER TABLE ONLY public.historico
 
 
 --
--- TOC entry 4684 (class 2606 OID 24654)
+-- TOC entry 4690 (class 2606 OID 24654)
 -- Name: musicaplaylist musicaplaylist_idmusica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -411,7 +443,7 @@ ALTER TABLE ONLY public.musicaplaylist
 
 
 --
--- TOC entry 4685 (class 2606 OID 24659)
+-- TOC entry 4691 (class 2606 OID 24659)
 -- Name: musicaplaylist musicaplaylist_idplaylist_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -420,7 +452,7 @@ ALTER TABLE ONLY public.musicaplaylist
 
 
 --
--- TOC entry 4686 (class 2606 OID 24664)
+-- TOC entry 4692 (class 2606 OID 24664)
 -- Name: musicascurtidas musicascurtidas_emailusuario_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -429,7 +461,7 @@ ALTER TABLE ONLY public.musicascurtidas
 
 
 --
--- TOC entry 4687 (class 2606 OID 24669)
+-- TOC entry 4693 (class 2606 OID 24669)
 -- Name: musicascurtidas musicascurtidas_idmusica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -438,7 +470,7 @@ ALTER TABLE ONLY public.musicascurtidas
 
 
 --
--- TOC entry 4688 (class 2606 OID 24674)
+-- TOC entry 4694 (class 2606 OID 24674)
 -- Name: musicasdescurtidas musicasdescurtidas_emailusuario_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -447,7 +479,7 @@ ALTER TABLE ONLY public.musicasdescurtidas
 
 
 --
--- TOC entry 4689 (class 2606 OID 24679)
+-- TOC entry 4695 (class 2606 OID 24679)
 -- Name: musicasdescurtidas musicasdescurtidas_idmusica_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -455,7 +487,7 @@ ALTER TABLE ONLY public.musicasdescurtidas
     ADD CONSTRAINT musicasdescurtidas_idmusica_fkey FOREIGN KEY (idmusica) REFERENCES public.musica(idmusica);
 
 
--- Completed on 2025-05-21 18:38:58
+-- Completed on 2025-05-21 23:51:43
 
 --
 -- PostgreSQL database dump complete
