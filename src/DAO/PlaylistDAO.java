@@ -75,21 +75,35 @@ public class PlaylistDAO {
     }
 
     public boolean deletarPlaylist(int idPlaylist) {
-        String sql = "DELETE FROM playlist WHERE idplaylist = ?";
+        String sqlMusicas = "DELETE FROM musicaplaylist WHERE idplaylist = ?";
+        String sqlPlaylist = "DELETE FROM playlist WHERE idplaylist = ?";
 
-        try (Connection conn = conexao.getConnection();
-            PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = conexao.getConnection()) {
+            conn.setAutoCommit(false);
 
-            stmt.setInt(1, idPlaylist);
-            int linhasAfetadas = stmt.executeUpdate();
+            try (
+                PreparedStatement stmt1 = conn.prepareStatement(sqlMusicas);
+                PreparedStatement stmt2 = conn.prepareStatement(sqlPlaylist)
+            ) {
+                stmt1.setInt(1, idPlaylist);
+                stmt1.executeUpdate();
 
-            return linhasAfetadas > 0;
+                stmt2.setInt(1, idPlaylist);
+                int linhasAfetadas = stmt2.executeUpdate();
+
+                conn.commit();
+                return linhasAfetadas > 0;
+            } catch (SQLException e) {
+                conn.rollback();
+                e.printStackTrace();
+                return false;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
-    
+
     public boolean atualizarTituloPlaylist(int idPlaylist, String novoTitulo) {
         String sql = "UPDATE playlist SET tituloplaylist = ? WHERE idplaylist = ?";
 
